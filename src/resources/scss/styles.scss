@@ -1,0 +1,261 @@
+
+
+$yellow: #fcd21d;
+$grey: #747d88;
+
+html {font-size: 62.5%;}
+*,
+::after,
+::before {margin: 0; padding: 0; box-sizing: inherit;}
+
+img {max-width: 100%;vertical-align: bottom;}
+h1,h2,h3,h4,h5,h6 {
+    letter-spacing: .075rem;
+    font-weight: 300;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+   }
+
+ul {list-style-type:none;}
+
+body {
+    font-size: 2.2rem;
+    font-family: Arial,Helvetica,sans-serif;
+    background-color: white;
+    //background-color: #f7f7f7;
+    font-weight: 500;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: $grey;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+li.button {
+    // background: #f16334;
+    border: none;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    outline: none;
+    position: relative;
+    letter-spacing: .2rem;
+    padding: 2rem 3rem;
+    color:white;
+    border-radius: .5rem;
+    transition: all .2s;
+    max-width:25rem;
+    cursor: pointer;
+
+
+    &:active {
+        background:#0a2e11;
+        color: #fff;
+      } 
+      
+    &:before {
+        content: '';
+        border-bottom: 5px solid #c93e0f;
+        padding: 1rem 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 0%;
+        transition: 0.3s;
+    }
+
+    &:hover:before {
+        width: 86%;
+        padding: 0;
+    } 
+    
+    &.outline {
+        background: none;
+        border:3px solid white;
+        font-weight: 600;
+    }
+
+    &.outline-grey {
+        color: #747d88;
+        background: none;
+        border:3px solid #747d88;
+        font-weight: 600;
+    }
+
+
+  }
+
+
+.bg {
+    &--yellow {
+        background-color: #fcd21d;
+    }
+    &--purple {
+      background-color: purple;
+    }
+
+    &--grape {
+      background-color: #9b61dd;
+    }
+    &--skyblue {
+      background-color: #2ea3f2;
+    }
+
+    &--pink {
+      background-color: pink;
+    }
+    
+    &--wine {
+      background-color: #eb7171;
+    }
+
+    &--blueberry {
+      background-color: $blueberry;
+    }
+
+    &--raspberry {
+      background-color: $raspberry;
+    }
+}
+
+.color {
+    &--yellow {
+        color: #fcd21d;
+    }
+
+    &--white {
+      color: white !important;
+  }
+
+}
+
+.align {
+    &--center {
+        text-align: center;
+    }
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .paragraph {
+
+    margin: 0 auto;
+  
+    padding:2rem;
+    background-color: white;
+    @include respond(tablet-portrait) {
+      padding:5rem;
+      font-size: 2.5rem; 
+      line-height: 3rem;
+      
+      &--50 {
+        width:50%;
+      }
+      &--80 {
+        width:80%;
+      } 
+    }   
+  }
+
+
+
+
+.moveinBottom { animation-name: moveinBottom; animation-duration: 2s;}
+.fadeIn {animation-name: fadeIn; animation-duration: 5s;}
+.moveInLeft { animation-name: moveinLeft; animation-duration: 2s;}
+.moveInRight { animation-name: moveinRight; animation-duration: 2s;}
+.moveOutRight { animation-name: moveOutRight; animation-duration: 2s;}
+
+@keyframes moveinLeft {
+	
+	0% {
+		opacity: 0;
+		transform: translateX(-100rem);
+	}	
+	
+	80% {
+
+		transform: translateX(1rem);
+		
+  }
+}
+
+
+
+@keyframes moveinRight {
+	
+	0% {
+		opacity: 0;
+		transform: translateX(10rem);
+	}	
+	
+	80% {
+		transform: translateX(-1rem);
+		
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translateX(0);		
+	}
+}
+
+@keyframes fadeIn {
+	
+	0% {
+		opacity: 0;
+	}	
+
+	100% {
+		opacity: 1;
+	
+	}
+}
+
+
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.18);
+    background-color: $yellow;
+    // border: 1px solid #ccc;
+    // border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    // font-weight: 700;
+    font-size:1.6rem;
+  }
+  
+  input[type=submit] {
+    background-color: #f16334;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #f16334;
+  }
+  
+  .container {
+    border-radius: 5px;
+    // background-color: #f2f2f2;
+    // padding: 20px;
+  }

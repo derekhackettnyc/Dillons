@@ -1,0 +1,95 @@
+  //
+  // Spotlight is just a grid system
+  //
+  .emphasize {
+    padding:3%;
+    display:grid;
+    grid-gap:1rem;
+    justify-items: center;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr;
+    margin-bottom: 1rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include respond(phone-plus) {
+      grid-template-columns: max-content 1fr;
+      grid-template-rows: 1fr; 
+      text-align: left;
+      justify-items: left;      
+    }
+
+
+    &--box-shadow {
+        box-shadow: 0px 10px 60px 0px rgba(1,33,92,0.1);
+    }
+
+    &__icon-wrapper {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 8rem;
+        width:8rem;
+        font-size: 6rem;
+
+        &--small {
+          height: 5rem;
+          width:5rem;
+          font-size: 3rem; 
+        }
+    }
+
+
+    &--numbers {
+      grid-template-columns: 12% 1fr;
+      grid-template-rows: 1fr;
+      text-align: left;
+      justify-items: left;         
+    }
+
+
+
+  &__avatar {
+      vertical-align: middle;
+      border-radius: 50%;
+      max-width: 20rem;
+  }
+
+
+  &__title, &__name {
+    color: #333;
+    text-transform: capitalize;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: bolder;
+  }
+
+  &__job-desc {
+      font-size: 70%;
+  }
+
+  &__text {
+    color:#898989;
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    color:dodgerblue;
+    font-size:90%;
+    cursor: pointer;
+  }
+
+  &__no {
+      font-size:6rem;
+      @include respond(tablet-portrait) {
+          font-size: 9rem;
+      }
+      font-weight: 700;
+      letter-spacing: -0.5rem;
+      justify-self: left;
+  }    
+
+}

@@ -1,0 +1,64 @@
+
+.moveinBottom { animation-name: moveinBottom; animation-duration: 2s;}
+.fadeIn {animation-name: fadeIn; animation-duration: 5s;}
+.moveInLeft { animation-name: moveinLeft; animation-duration: 2s;}
+.moveInRight { animation-name: moveinRight; animation-duration: 2s;}
+.moveOutRight { animation-name: moveOutRight; animation-duration: 2s;}
+
+
+@keyframes moveinLeft {
+	
+	0% {
+		opacity: 0;
+		transform: translateX(-100rem);
+	}	
+	
+	80% {
+
+		transform: translateX(1rem);
+		
+  }
+}
+
+
+
+@keyframes moveinRight {
+	
+	0% {
+		opacity: 0;
+		transform: translateX(10rem);
+	}	
+	
+	80% {
+		transform: translateX(-1rem);
+		
+	}
+	
+	100% {
+		opacity: 1;
+		transform: translateX(0);		
+	}
+}
+
+@keyframes fadeIn {
+	
+	0% {
+		opacity: 0;
+	}	
+
+	100% {
+		opacity: 1;
+	
+	}
+}
+
+@keyframes example {
+
+		0%   {background-color:red; left:10px; top:10px;}
+	25%  {background-color:yellow; left:80%; top:40px;}
+	50%  {background-color:blue; left:80%; top:60%;}
+		75%  {background-color:green; left:50px; top:50%;}
+	100% {background-color:red; left:10px; top:10px;}
+  }
+
+

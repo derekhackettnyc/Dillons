@@ -1,0 +1,54 @@
+.toast {
+    z-index: 9999999999999;
+    display:flex;
+    background-color: #333;
+    color: #fff;
+    border-radius: 3px;
+    padding:1rem;
+    border-radius: 3px 3px 3px 3px;  
+    box-shadow: 0 0 10px #999; 
+    position: fixed;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%); 
+    animation: fadein 0.5s, fadeout 0.5s forwards;
+
+    display: flex;
+    justify-content: space-between;
+    width:90%;
+
+    @include respond(tablet-portrait) {
+      width:initial;
+    }
+
+    & > div {
+        padding:1rem;
+
+        font-size: 1.2rem;
+        @include respond(tablet-portrait) {
+          font-size: initial;
+        }
+    }
+
+    &__icon {
+        width:4rem; 
+    }
+
+    &__message {
+      padding: .5rem 0;
+    }
+
+
+
+  }
+
+
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }

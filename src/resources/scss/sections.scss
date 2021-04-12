@@ -1,0 +1,659 @@
+.section {
+    position: relative;
+    overflow: hidden;
+
+    &__heading {
+        position: relative;
+        font-size: 2.6rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 5%;
+        @include respond(tablet-portrait) {
+            font-size: 4rem;
+        }
+    }
+
+    &__sub-heading {
+        font-weight: lighter;
+        text-align: center;
+        width: 80%;
+        padding:5%;
+        margin: 0  auto;
+        text-transform: capitalize;
+    }
+
+    &__caption {
+        font-weight: lighter;
+        text-align: center;
+        width: 80%;
+        padding:2%;
+        margin: 0  auto;
+    }
+
+    &__intro {
+
+        font-weight: lighter;
+        text-align: center;
+        line-height: 150%;     
+        padding:5%;
+        @include respond(tablet-portrait) {
+            padding: 10rem 5rem;
+            font-size:120%;
+        }
+    }
+    &--margins {
+        margin: 2% 5%;
+    }    
+
+}
+
+
+
+.header {
+
+    width: 100%; 
+    position: fixed; 
+    height:7rem;
+    top: 0px; 
+    transition: top 0.4s ease-in-out; 
+    opacity: 1; 
+    z-index: 15; 
+    border-bottom: .05rem;  
+    // box-shadow: 1px 5px 5px -5px #aaa; 
+    background-color: #751308 ; 
+    // padding:2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tablet-landscape) {
+        height: 12rem;
+        align-items: flex-start;
+        padding-top: 1.6rem;
+        // justify-content: space-between;
+
+    }
+}
+
+
+.aninmate-header {
+    width: 100%; 
+    position: fixed; 
+    height:7rem;
+    top: 0px; 
+    transition: top 0.4s ease-in-out; 
+    opacity: 1; 
+    z-index: 15; 
+    border-bottom: .05rem;  
+    // box-shadow: 1px 5px 5px -5px #aaa; 
+    background-color: #751308 ; 
+    // padding:2rem;
+
+        display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  
+  }
+
+
+.home {
+    position: relative;
+    background: url("/assets/images/silver-wedding-ring-png-1.jpg") center center/contain no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.about {
+    position: relative;
+    &__hero {
+        background: url(/assets/images/zRdi1I.jpg) center center/cover no-repeat;
+        box-shadow: inset 0px -30vh 0px 0px #ffffff;
+        padding:10%;
+        // margin: 0 5%;
+    }
+
+
+    &__write-up {
+        //border:1px solid black;
+        box-shadow: 0px 15px 45px 0px rgba(0,0,0,0.15);
+        background-color: $off-white;
+        padding: 10%;
+        max-width: 77rem;
+
+        & h2 {
+
+            font-size:4.5rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+.get-coaching {
+    display:flex;
+    justify-content: center;
+    background: url(https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/florist-16.jpg) bottom center/cover no-repeat;
+    
+    &__emphasizes {
+        padding:5%;
+        @include respond(tablet-landscape) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap:5rem;
+            margin-top:10rem;
+        }
+    }
+}
+
+.banner {
+
+    display: flex;
+
+    &--shipping {
+        justify-content: space-around;
+        align-items: center;
+        background-color: $falured;
+        color:white;
+        padding:4rem;
+    }
+
+    &--wedding-arrangements {
+        justify-content: flex-end;
+        min-height: 50vh;
+        background: linear-gradient(90deg,rgba(235,235,235,0) 0%,#ebebeb 70%),url(https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/florist-02-1.jpg) center center/cover no-repeat;
+    }
+
+    &--misc {
+            background: linear-gradient(105deg,rgba(43,135,218,0) 55%, $yellow 0%),url(https://www.elegantthemes.com/preview/Divi/wp-content/uploads/2017/12/writer-03.jpg) right center/cover no-repeat;
+    justify-content: center;
+    align-items:center;
+    }
+
+    &__text-box {
+      
+        padding:5rem;
+        flex:0 1 50%;
+
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & > * {
+            margin-bottom: 1rem;
+        }
+    }
+    
+    &__promo {
+        font-size: 6rem;
+        font-weight: 900;
+
+        & span {
+            font-size:3rem;
+            font-weight: 500;
+            margin-left:1rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.experiment {
+    background-color: limegreen;
+
+    // height:100vh;
+    padding:1rem;
+
+
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+
+    // & div {
+    //     margin:1rem 0;
+    // }
+
+
+
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap:1rem;
+
+
+    // justify-items: center;
+
+    @include respond(tablet-landscape) {
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+    }
+
+}
+
+
+// .hero {
+
+//     display: flex;
+//     padding: 25% 5%;
+//     background: #fcd21d;
+
+//     @include respond(tablet-portrait) {
+//         height:100vh;
+//     }
+
+
+//     @include respond(tablet-landscape) {
+//         padding:10% 60% 10% 5%;
+//         background-image:
+//             linear-gradient(-105deg,rgba(43,135,218,0) 50%,#fcd21d 50%),        
+//             url(https://www.elegantthemes.com/preview/Divi/wp-content/uploads/2017/10/business-13.jpg);
+//         }
+// }
+
+.accomplishment {
+
+    &__figure {
+        // opacity: .3;
+        // margin: 3rem 0rem;
+        text-align: center;
+
+        padding: 5rem;
+        background-image: linear-gradient(180deg,#ffffff 65%,#fcd21d 65%);
+
+
+        &--after {
+            background-image: linear-gradient(180deg,$yellow 45%,#ffffff 45%);
+            padding:5%;
+
+        }
+
+        & img {
+            border:2rem solid white;
+        }
+    }
+
+    &__efforts  {
+        background: $yellow;
+        padding-bottom: 6rem;
+    }
+
+
+}
+
+
+.laptop {
+    // padding: 2rem;
+    // height: 30vh;
+    background: #fcd21d;
+    display: flex;
+    align-items: flex-end;
+    position: relative;  
+
+    @include respond(tablet-landscape) {
+        height: 80vh;
+        justify-content: center;
+        background-image: 
+            linear-gradient(-105deg,rgba(43,135,218,0) 50%,#fcd21d 50%),
+            url(https://www.elegantthemes.com/preview/Divi/wp-content/uploads/2017/10/business-13.jpg);
+    }
+
+    & img {
+        @include respond(tablet-landscape) {
+            bottom: -4rem;
+            position: absolute;
+
+        }              
+
+    }
+} 
+
+
+.award-winning-design {
+    display: flex;
+    justify-content: center;
+    // align-items: flex-end;
+
+    // margin-top: 5rem;
+    // padding-bottom: 10rem;
+    background-color: $off-white;
+
+    &--yellow-bg {
+        background: linear-gradient(180deg,$off-white 80%,#fcd21d 80%);
+        padding-bottom: 5%;
+    }
+
+
+
+    & img {
+        border: 2rem solid white;
+    }
+
+    @include respond(tablet-landscape) {
+        box-shadow: inset 0px 100px 0px 0px #ffffff;
+    }
+
+
+    
+}
+
+
+
+
+.latest-work {
+    text-align: center;
+    background: $off-white;
+    // padding-bottom: 10%;
+}
+
+
+.blog {
+    display:grid;
+    // grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 5rem;
+    margin-bottom: 5rem;
+
+    @include respond(tablet-landscape) {
+        grid-template-columns: 1fr 1fr;
+
+    }  
+    
+    @include respond(desktop) {
+        grid-template-columns: 1fr 1fr 1fr;
+                padding:2rem;
+
+    }  
+
+    // Don't delete yet!!!
+    // height: 100vh;
+    //overflow:auto; // stops margins from pushing up/down OR in my case have child declared as display:inline-block. Same result
+}
+
+
+
+.conversation {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tablet-portrait) {
+        height:100vh;
+    }
+
+
+
+    background-color: $yellow;
+
+  
+    &__main {
+      flex:0 1 50rem;
+      height: 100%;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__form {
+        margin:10% 0;
+
+        & button {
+            margin-top:5%;
+        }
+    }
+    
+    & p {
+      line-height: 2.5rem;
+    }
+  
+   
+  }
+
+.newsletter {
+
+    padding:5%;
+    background-color: $off-white;
+    // background-color: yellowgreen;
+
+
+    @include respond(tablet-portrait) {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__blurb {
+        flex:0 0 40%;
+        padding:5% 2% 2%;
+    }
+
+    &__form {
+        flex:0 0 40%;
+        padding:5% 2% 2%;
+    }
+}
+
+
+
+
+
+// .product-features {
+//     background-color: $off-white;
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     grid-template-rows: max-content 1fr;
+
+//     justify-items: center;
+
+//     @include respond(tablet-portrait) {
+//         // height:80vh;
+//         grid-template-columns: 1fr 1fr;
+//         grid-template-rows: 1fr;
+//         padding-bottom: 5vh;
+//         box-shadow: inset 0px 100px 0px 0px #ffffff;
+//     }
+
+//     &__write-up {
+//         padding: 5%;
+//         align-self: end;
+//         // background-color:limegreen;
+//         @include respond(tablet-portrait) {
+//             padding: 40% 20% 5%;
+
+
+//         }
+//     }
+
+//     &__figure {
+//        padding:5%;
+//     }
+
+
+// }
+
+
+// .product-features2 {
+//     background-color:limegreen;
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     grid-template-rows: 1fr;
+//     justify-items: center;
+
+//     @include respond(tablet-portrait) {
+//         // height:60vh;
+//         grid-template-columns: 1fr 1fr;
+//     }
+
+//     @include respond(tablet-landscape) {
+//         // padding-bottom: 5vh;
+//         // box-shadow: inset 0px 100px 0px 0px #ffffff;
+//     }
+
+//     &__write-up {
+//         border:10px solid purple;
+//         padding: 5%;
+//         align-self: end;
+
+
+//     }
+
+//     &__figure {
+//         border:1rem solid violet;
+//         margin-top: -10%;
+//     }
+
+
+// }
+
+// .tablet {
+//     padding: 5%;
+//     background-image: linear-gradient(180deg,$off-white 45%,#ffffff 45%);
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     grid-template-rows: max-content 1fr;
+//     gap:5%;
+//     justify-items: center;
+//     align-items: center;
+//     @include respond(tablet-portrait) {
+//         grid-template-columns: 1fr 1fr;
+//         grid-template-rows: 1fr;
+
+//     }    
+
+//     &__features {
+//         display: grid;
+//         grid-template-columns: 1fr;
+//         grid-template-rows: 1fr 1fr 1fr;
+//         gap:3rem;
+//         padding:5%;
+
+//         & h3 {
+//             font-size:2rem;
+//             // text-transform: uppercase;
+//         }
+
+
+//     }
+//     &__figure {
+
+//     }
+// }
+
+// .presentation-case-study-one {
+
+//     background-color: $off-white;
+//     display:grid;
+//     grid-template-columns: 1fr;
+//     justify-items: center;
+//     // align-items: end;
+//     padding:5rem;
+//     gap:5rem;
+
+
+//     // border:10px solid black;
+//     // position: relative;
+
+//     @include respond(tablet-portrait) {
+//         grid-template-columns: 1fr 1fr 1fr;
+//         grid-template-rows: repeat(2, max-content) 1fr max-content;
+
+//     } 
+
+//     &__figure {
+//         // border:3px solid violet;
+
+//         &--move-over {
+//             @include respond(tablet-portrait) {
+//             grid-column: 3/4;
+//             }
+//         }    
+//         &--laptop {
+//             @include respond(tablet-portrait) {
+//                 grid-row: 3/4;
+//                 grid-column: 1/4;
+//                 margin-top: -20%;
+
+//                 }
+//         }
+//     }
+
+//     &__paragraph {
+//         text-align: center;
+//         @include respond(tablet-portrait) {
+//             grid-column: 1/4;
+//             grid-row: 4/5;
+//             }        
+//     }
+// }
+
+// .tesco {
+//     background-color: $off-white;
+
+// & > div {
+//         border:1rem solid white;
+//     }
+    
+
+
+// }
+
+
+.footer {
+    text-align: center;
+    padding:5%;
+    background-color: $falured;
+    color:white;
+
+    &__design-by {
+        padding: 3rem 0 1rem;
+        font-size:80%;
+    }
+}
+
+.admin {
+    // border:3px solid red;
+
+    &__dashboard {
+
+        margin-top: 8rem;
+
+        @include respond(tablet-landscape) {
+            margin-top: 14rem;
+                    // padding:10% 2%;
+        }
+    
+    }
+
+    // &__heading {
+    //     font-size:5rem;
+    //     color:$falured;
+    //     text-align: center;
+    // }
+}
+
+
+
+  
+
+
+
+

@@ -1,0 +1,217 @@
+@import './mixins.scss';
+@import './constants.scss';
+@import './base.scss';
+@import './components.scss';
+@import './layouts.scss';
+@import './cards.scss';
+@import './sections.scss';
+@import './typography.scss';
+@import './forms.scss'; 
+@import './productlisting.scss';
+@import './utilities.scss';
+@import './animation.scss';
+@import './grid-systems.scss';
+@import './ddmenu.scss';
+@import './tooltip.scss';
+@import './elements.scss';
+@import './toaster.scss';
+
+
+.rrt-button {
+    color: darkslategrey;
+    text-transform:uppercase;
+}
+
+
+.slider-timer {
+    color: #000;
+    background-color: #f1f1f1;
+    height:.2rem;
+
+    &__progress {
+      background-color: red;
+      width:0;
+      height: 100%;
+      animation: pulse 7s;
+    }
+}
+
+@keyframes pulse {
+  0% {
+    width:0;
+  }
+  10% {
+    width:0;
+  }
+  100% {
+    width:100%;
+  }
+}
+
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+  
+    display:flex;
+    align-items: center;
+    padding:5%;
+
+    @include respond(tablet-landscape) {
+      margin-top: -12rem;
+      height: 90vh;
+    } 
+
+    &__slide { 
+  
+      background: white no-repeat center center / cover; 
+
+      &-audi {
+
+        &--0 {
+          background-image: url("/assets/images/engagement-ring-9955-landscape-1x.jpg");
+    
+          @include respond(device-portrait) {
+            background-image: url("/assets/images/engagement-ring-9955-mobile-1x.jpg");
+          }
+          @include respond(desktop) {
+            background-image: url("/assets/images/engagement-ring-9955-4k-1x.jpg");
+            justify-content: flex-start;
+            padding: 3rem;
+          }
+        }        
+
+
+        &--1 {
+          
+          background-image: url("/assets/images/engagement-ring-1750-landscape-1x.jpg");
+    
+          @include respond(device-portrait) {
+            background-image: url("/assets/images/engagement-ring-1750-mobile-1x.jpg");
+          }
+          @include respond(desktop) {
+            // background-image: url("./images/audo-sportback-A3-4k-1x.jpg");
+            background-image: url("/assets/images/engagement-ring-1750-4k-1x.jpg");
+            justify-content: flex-start;
+            padding: 3rem;
+          }
+        }  
+        
+        
+        &--2 {
+          
+          background-image: url("/assets/images/bering-10122-landscape-1x.jpg");
+    
+          @include respond(device-portrait) {
+            background-image: url("/assets/images/bering-10122-mobile-1x.jpg");
+          }
+          @include respond(desktop) {
+            background-image: url("/assets/images/bering-10122-4k-1x.jpg");
+            justify-content: flex-start;
+            padding: 3rem;
+          }
+        }    
+        
+        &--3 {
+          
+          background-image: url("/assets/images/SIFJAKOBS-landscape-1x.jpg");
+    
+          @include respond(device-portrait) {
+            background-image: url("/assets/images/SIFJAKOBS-mobile-1x.jpg");
+          }
+          @include respond(desktop) {
+            // background-image: url("./images/audo-sportback-A3-4k-1x.jpg");
+            background-image: url("/assets/images/SIFJAKOBS-4k-1x.jpg");
+            justify-content: flex-start;
+            padding: 3rem;
+          }
+        } 
+        
+        &--4 {
+          
+          background-image: url("/assets/images/coeur-de-lion-bracelet-landscape-1x.jpg");
+    
+          @include respond(device-portrait) {
+            background-image: url("/assets/images/coeur-de-lion-bracelet-mobile-1x.jpg");
+          }
+          @include respond(desktop) {
+            background-image: url("/assets/images/coeur-de-lion-bracelet-4k-1x.jpg");
+            justify-content: flex-start;
+            padding: 3rem;
+          }
+        }          
+    
+  
+      }
+
+  
+      
+    }
+  
+    &__text {
+      display:flex;
+      flex-direction:column;
+ 
+      height:70%;
+      justify-content: space-between;
+
+  
+  
+      @include respond(tablet-landscape) {
+        display:block;
+        height: initial;
+
+      }     
+
+  
+      & > * {
+        padding:2rem 1rem;
+      }  
+  
+    }
+
+    &__blurb {
+      @include respond(tablet-portrait) { 
+        font-size:2.5rem;
+    }
+      @include respond(tablet-landscape) { 
+        width:50%;
+    }
+  }
+  
+  
+    &__spec {
+      display:flex;
+      flex-direction:column;
+      justify-content: space-between;
+      padding:2rem;
+      color:black;
+  
+  
+      @include respond(desktop) {
+        // justify-content: space-evenly;
+        width:60%;
+        max-width:800px;
+        height: 40%;
+        //padding:0;
+      
+      } 
+  
+  
+      // width:80%;
+      height:70%;
+      > * {
+        //border:3px solid black;
+  
+        background-color:rgba(white, .5);
+        padding:1rem;
+        border-radius: 15px 30px 20px;
+      } 
+    }
+  
+  
+  
+  
+  }
+  
